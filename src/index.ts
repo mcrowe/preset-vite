@@ -3,7 +3,6 @@ import type { FilterPattern } from "@rollup/pluginutils";
 import type { ParserPlugin, ParserOptions } from "@babel/parser";
 import type { TransformOptions } from "@babel/core";
 
-import prefresh from "@prefresh/vite";
 import { preactDevtoolsPlugin } from "./devtools.js";
 import { createFilter, parseId } from "./utils.js";
 import { transformAsync } from "@babel/core";
@@ -165,7 +164,6 @@ function preactPlugin({
 		},
 		jsxPlugin,
 		preactDevtoolsPlugin({ injectInProd: devtoolsInProd, shouldTransform }),
-		prefresh({ include, exclude }),
 	];
 }
 
